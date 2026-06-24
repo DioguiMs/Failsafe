@@ -3,6 +3,7 @@ package com.dioguims.failsafe.mod.event;
 import com.dioguims.failsafe.mod.FailsafeMod;
 import com.dioguims.failsafe.mod.enchantment.ModEnchantments;
 import net.minecraft.tags.FluidTags;
+import net.minecraft.ChatFormatting;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -22,11 +23,45 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
 import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
+import net.minecraft.network.chat.Component;
 
 @EventBusSubscriber(modid = FailsafeMod.MOD_ID)
 public class ModEventHandler {
 
     private static final int DAMAGE_MARGIN = 1;
+
+    @SubscribeEvent
+    public static void onItemTooltip(ItemTooltipEvent event) {
+        ItemStack stack = event.getItemStack();
+
+        if (!isAtDurabilityLimit(stack)) return;
+
+        event.getToolTip().add(Component.empty());
+
+        event.getToolTip().add(
+            Component.translatable("tooltip.failsafe.disabled")
+                .withStyle(ChatFormatting.RED, ChatFormatting.BOLD)
+        );
+
+        event.getToolTip().add(
+            Component.translatable("tooltip.failsafe.repair_needed")
+                .withStyle(ChatFormatting.GRAY, ChatFormatting.ITALIC)
+        );
+    }
+
+    private static boolean isAtDurabilityLimit(ItemStack stack) {
+        if (stack.isEmpty()) return false;
+        if (!stack.isDamageableItem()) return false;
+        if (!hasFailsafe(stack)) return false;
+
+        int maxDamage = stack.getMaxDamage();
+        if (maxDamage <= 0) return false;
+
+        int damageBorder = maxDamage - DAMAGE_MARGIN;
+        
+        return stack.getDamageValue() >= damageBorder;
+    }
 
     @SubscribeEvent(priority = EventPriority.HIGH)
     public static void onLivingDamage(LivingDamageEvent.Pre event) {

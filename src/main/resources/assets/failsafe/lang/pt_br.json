@@ -1,3 +1,5 @@
 {
-  "enchantment.failsafe.failsafe": "Failsafe"
+    "enchantment.failsafe.failsafe": "Failsafe",
+    "tooltip.failsafe.disabled": "⚠ FAILSAFE ATIVO",
+    "tooltip.failsafe.repair_needed": "Repare este item para usá-lo novamente"
 }

@@ -8,8 +8,9 @@ license="${mod_license}"
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
+authors="DioguiMs"
 description='''
-Example mod description.
+Adds a failsafe enchantment that prevents items from breaking when they reach their durability limit. Instead, the item will stop working until it is repaired. This mod is designed to be compatible with other mods and can be used in various modpacks.
 '''
 
 [[mixins]]

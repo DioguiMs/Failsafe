@@ -1,25 +1,23 @@
+# 🛠️ Failsafe Enchantment Mod
 
-Installation information
-=======
+![Minecraft](https://img.shields.io/badge/Minecraft-1.21.x-green)
+![NeoForge](https://img.shields.io/badge/NeoForge-Latest-orange)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+> A Minecraft mod that adds the **Failsafe** enchantment,
+> preventing your items from breaking permanently.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+**Failsafe** is an enchantment that protects your favorite items from being
+destroyed. When an item with this enchantment reaches **1 durability point**,
+it completely stops working until repaired, but it **never breaks**.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+### Getting the Enchantment
+You can obtain the **Failsafe** enchantment through the enchantment table.
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+### When the Item Reaches 1 Durability
+The item will display in the tooltip:
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+⚠ FAILSAFE ACTIVE
+Repair this item to use it again
+
+And will be **completely blocked** until repaired.
