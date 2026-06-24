@@ -1,4 +1,4 @@
-![Failsafe](https://github.com/DioguiMs/Failsafe/main/assets/failsafe.gif)
+![Failsafe](https://github.com/DioguiMs/Failsafe/tree/main/assets/failsafe.gif)
 # 🛠️ Failsafe Enchantment Mod
 
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.21.x-green)
