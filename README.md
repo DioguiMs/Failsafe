@@ -1,8 +1,8 @@
 ![Failsafe](https://raw.githubusercontent.com/DioguiMs/Failsafe/refs/heads/main/assets/failsafe.gif)
 # 🛠️ Failsafe Enchantment Mod
 
-![Minecraft](https://img.shields.io/badge/Minecraft-1.21.x-green)
-![NeoForge](https://img.shields.io/badge/NeoForge-Latest-orange)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-green)
+![NeoForge](https://img.shields.io/badge/NeoForge-orange)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 > A Minecraft mod that adds the **Failsafe** enchantment,
