@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.dioguims.failsafe.mod.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ItemStackMixin",
+    "DimensionalMineshaftMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
