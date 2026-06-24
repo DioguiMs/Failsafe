@@ -1,4 +1,4 @@
-![https://github.com/DioguiMs/Failsafe/tree/main/assets/failsafe.gif](https://raw.githubusercontent.com/DioguiMs/Failsafe/refs/heads/main/assets/failsafe.gif?token=GHSAT0AAAAAAD6UW2N2WFFO3TY55YATWVDM2R4E4OA)
+![Failsafe](https://raw.githubusercontent.com/DioguiMs/Failsafe/refs/heads/main/assets/failsafe.gif)
 # 🛠️ Failsafe Enchantment Mod
 
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.21.x-green)
